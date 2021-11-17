@@ -1,0 +1,201 @@
+html, body {
+	background:#2f3133;
+	margin:0px;
+	height:100%;
+	font-family:verdana;
+	
+}
+*{margin: 0; padding: 0; outline: 0;}
+
+.header {
+	padding:0px;
+	margin:0px;
+}
+
+.contents {
+	padding:0px;
+	margin:0px;
+	z-index:1;
+}
+
+img {
+	width:200px;
+	height:200px;
+}
+
+.wrapper{
+	background: rgba(0,0,0,0.5); /*setting background colour for wrapper alpha set for transparent effect */
+	height:4000px;
+	width:1000px;
+	margin: 0 auto 0 auto;
+	word-wrap: break-word;
+	position:relative; /*stays in same place when scrolling */
+	z-index:500;
+	
+}
+
+
+#vidbackground {
+	position:fixed;
+	right:0;
+	bottom:0;
+	min-width:100%;
+	min-height:100%;
+	z-index:0;
+}
+
+
+.eimg {
+	width:100%;
+	height:100%;
+	border-bottom-right-radius:20px;
+	border: 2px solid;
+	-webkit-animation: color_change 1s infinite alternate; /*these effects alternate colours to give a futuristic effect along the borders of images */
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;
+}
+
+.filler {
+	height:50px;
+	width:102%;
+	background-color:white;
+	margin-top:200px;
+	-webkit-animation: bgc 1s infinite alternate;
+	-moz-animation: bgc 1s infinite alternate;
+	-ms-animation: bgc 1s infinite alternate;
+	-o-animation: bgc 1s infinite alternate;
+	animation: bgc 1s infinite alternate;
+	text-align:center;
+	font-size:40px;
+}
+
+.entry {
+	width:100%;
+	height:250px;
+	margin-top:15px;
+	background: rgba(100,100,100,0.3);
+	overflow-wrap:break-word; /*formatting for entry of text */
+}
+
+.entryimg {
+	float:left;
+	width:200px;
+	height:250px; /*formatting for entry of image */
+}
+
+.entrytext {
+	width: calc(100% - 300px); /*stops the text from going over the wrapper */
+	height:250px;
+	padding-left:200px;
+	margin-left:50px;
+}
+
+.sidenav {
+  height: 100%; 
+  width: 160px; /*Set the width of the sidebar */
+  position: fixed; /*Fixed Sidebar (stay in place on scroll) */ 
+  z-index: 1; /*Stay on top */
+  top: 0; /*Stay at the top */
+  left: 0;
+  background-color: black; 
+  opacity:0.7;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  font-family:verdana;
+  -moz-box-shadow:0 0 0.15px 0 black;
+-webkit-box-shadow:0 0 0.15px 0 black;
+	box-shadow:0 0 1px 0 black;
+  color:black;
+}
+
+/* The navigation menu formatting */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #e84118;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+p{
+	color:white;
+	overflow-wrap:break-word;
+}
+
+h1 { 
+	color:white;
+	font-family:'Anton';
+	letter-spacing: 1px;
+	font-size:40px;
+}
+
+.em { 
+	-webkit-animation: color_change 1s infinite alternate; /*colour lines of text to match border of pictures and to emphasise clicking of links */
+	-moz-animation: color_change 1s infinite alternate;
+	-ms-animation: color_change 1s infinite alternate;
+	-o-animation: color_change 1s infinite alternate;
+	animation: color_change 1s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+	from { color: #d64acd; }
+	to { color: #3A49D2; }
+}
+@-moz-keyframes color_change {
+	from { color: #d64acd; }
+	to { color: #3A49D2; }
+}
+@-ms-keyframes color_change {
+	from { color: #d64acd; }
+	to { color: #3A49D2; }
+}
+@-o-keyframes color_change {
+	from { color: #d64acd; }
+	to { color: #3A49D2; }
+}
+@keyframes color_change {
+	from { color: #d64acd; }
+	to { color: #3A49D2; }
+}
+
+
+@-webkit-keyframes bgc {
+	from { background-color: #d64acd; color:#3A49D2; }
+	to { background-color: #3A49D2; color:#d64acd;}
+}
+@-moz-keyframes bgc {
+	from { background-color: #d64acd; color:#3A49D2; }
+	to { background-color: #3A49D2; color:#d64acd;}
+}
+@-ms-keyframes bgc {
+	from { background-color: #d64acd; color:#3A49D2; }
+	to { background-color: #3A49D2; color:#d64acd;}
+}
+@-o-keyframes bgc {
+	from { background-color: #d64acd; color:#3A49D2; }
+	to { background-color: #3A49D2; color:#d64acd;}
+}
+@keyframes bgc {
+	from { background-color: #d64acd; color:#3A49D2; } /*connecting animation style to above css styling for changing colours so it knows what to apply */ 
+	to { background-color: #3A49D2; color:#d64acd;}
+}
+
+
